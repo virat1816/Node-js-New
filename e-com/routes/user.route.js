@@ -1,14 +1,14 @@
-let express = require("express");
-const { userController } = require("../controllers");
-const upload = require("../middleware/multer");
-let route = express.Router();
+const express = require('express');
+const { register } = require('../controllers/user.controller');
+const upload = require('../middleware/multer');
+const route = express.Router();
 
-route.get("/get", (req, res) => {
+route.get('/get', (req, res) => {
   res.status(200).json({
-    message: "user get succeews",
+    message: 'User get successful',
   });
 });
 
-route.post("/register", userController.register);
+route.post('/register', register);
 
 module.exports = route;

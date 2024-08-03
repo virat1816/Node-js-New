@@ -2,6 +2,7 @@ require("dotenv").config();
 let http = require("http");
 let express = require("express");
 const bodyParser = require("body-parser");
+require("./helper/crons");
 const dbConnect = require("./db/dbConnect");
 const routes = require("./routes");
 

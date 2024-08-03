@@ -25,11 +25,11 @@ let register = async (req, res) => {
       profile: path,
     };
 
-    // let duplicate = await adminService.findAdminByEmail(body.email);
+    let duplicate = await adminService.findAdminByEmail(body.email);
 
-    // if (duplicate) {
-    //   throw new Error("admin already regsiterd");
-    // }
+    if (duplicate) {
+      throw new Error("admin already regsiterd");
+    }
 
     let admin = await adminService.register(newBody);
 

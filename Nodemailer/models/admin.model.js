@@ -4,6 +4,9 @@ let adminSchema = new mongoose.Schema({
   email: {
     type: String,
   },
+  profile: {
+    type: String,
+  },
   password: {
     type: String,
   },
